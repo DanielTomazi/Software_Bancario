@@ -40,7 +40,7 @@ public class SistemaBancario {
                     System.out.println("Novo saldo: " + saldo);
                 }
             } else if (opcao == 3) {
-                System.out.println("Valor recebido: ");
+                System.out.println("Valor depositado: ");
                 double valor = leitura.nextDouble();
                 saldo += valor;
                 System.out.println("Novo saldo: " + saldo);
