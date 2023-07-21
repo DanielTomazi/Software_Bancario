@@ -1,6 +1,6 @@
 # Software-Bancario
 
 ************************************************************************
-Software criado com a linguagem de programação Java utilizando laços de repetição para simular oque o sistema de um caixa eletronico ou o sistema de aplicativo dos bancos realiza, como transferências, depositos, visualização continua em relação ao saldo da conta. (Projeto finalizado)
+Estrutura Back-end de Software criado com a linguagem de programação Java utilizando laços de repetição para simular oque o sistema de um caixa eletronico ou o sistema de aplicativo dos bancos realiza, como transferências, depositos, visualização continua em relação ao saldo da conta. (Projeto finalizado)
 ************************************************************************
 
