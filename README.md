@@ -5,4 +5,6 @@ Estrutura Back-end de Software criado com a linguagem de programação Java util
 Version 1.0 - Inserção do código.
 *************************************************************************************************************************************************************************************
 Version 1.1 - Adaptação de alguns nomes, sejam eles de diretório ou no pacote source.
+***
+# Autor: Daniel Tomazi de Oliveira
 
