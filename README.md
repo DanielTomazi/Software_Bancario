@@ -1,3 +1,3 @@
-# Software-Bancario
-
-Estrutura Back-end de Software criado com a linguagem de programação Java utilizando laços de repetição para simular oque o sistema de um caixa eletrônico ou o sistema de aplicativo dos bancos realiza, como transferências, depósitos, visualização continua em relação ao saldo da conta. (Projeto finalizado, criado através da IDEA IntelliJ)
+# Software Bancario
+***
+Back-end structure of software created with the Java programming language, using loops to simulate the operations performed by an ATM system or a banking app, such as transfers, deposits, and continuous balance viewing. (Completed project, created using IDEA IntelliJ)
