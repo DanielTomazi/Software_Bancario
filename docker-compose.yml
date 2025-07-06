@@ -1,0 +1,67 @@
+version: '3.8'
+
+services:
+  sistema-bancario:
+    build: .
+    container_name: sistema-bancario-app
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+      - DB_HOST=postgres
+      - DB_USERNAME=banco_user
+      - DB_PASSWORD=banco_pass
+    depends_on:
+      - postgres
+    networks:
+      - banco-network
+    restart: unless-stopped
+    volumes:
+      - ./logs:/app/logs
+
+  postgres:
+    image: postgres:15-alpine
+    container_name: sistema-bancario-db
+    environment:
+      POSTGRES_DB: sistema_bancario
+      POSTGRES_USER: banco_user
+      POSTGRES_PASSWORD: banco_pass
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - banco-network
+    restart: unless-stopped
+
+  redis:
+    image: redis:7-alpine
+    container_name: sistema-bancario-cache
+    ports:
+      - "6379:6379"
+    networks:
+      - banco-network
+    restart: unless-stopped
+
+  nginx:
+    image: nginx:alpine
+    container_name: sistema-bancario-proxy
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./ssl:/etc/nginx/ssl
+    depends_on:
+      - sistema-bancario
+    networks:
+      - banco-network
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+
+networks:
+  banco-network:
+    driver: bridge
