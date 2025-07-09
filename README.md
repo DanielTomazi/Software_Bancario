@@ -1,7 +1,7 @@
 # Sistema Bancário Robusto
 
 ## Visão Geral
-Sistema bancário completo desenvolvido com Java 17 e Spring Boot 3.2, seguindo os princípios SOLID, GRASP e Clean Code.
+Sistema bancário completo desenvolvido com Java 17 e Spring Boot 3., seguindo os princípios SOLID, GRASP e Clean Code.
 
 ## Tecnologias Utilizadas
 - **Java 17** - Linguagem de programação
